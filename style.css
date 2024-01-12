@@ -1,5 +1,6 @@
 
 /* CHECK BOX */
+/* @import url(http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.css); */
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css);
 @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
@@ -47,15 +48,15 @@ input[type="checkbox"]:checked+label:after {
 /* COVER */
 .cover {
     background-image: url(./img.jpg);
-    object-fit: cover;
+    object-fit: contain;
     background-size: cover;
+    background-position: center top;
     /* background-image: linear-gradient(to bottom, #ef91c7, #df95d4, #cd9ade, #b89fe5, #a3a3e8, #91adf1, #7db6f6, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
     position: absolute;
     border-radius: 10px;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 2em 5em; /* Thay vì 40px 100px */
+    transform: translate(-50%, 5%);
+    padding: 2em 7em; /* Thay vì 40px 100px */
     font-family: 'Salsa', cursive;
 }
 
@@ -94,7 +95,7 @@ input[type="checkbox"]:checked+label:after {
     float: right;
     border: 1.6px solid black;
     padding: 5px 10px;
-    margin: -37px -37px 0px 0px;
+    position: fixed;
     background-color: rgb(247, 42, 247);
     color: white;
     border-radius: 0px 5px 5px 0px;
@@ -105,6 +106,7 @@ input[type="checkbox"]:checked+label:after {
     margin-left: -90px;
     margin-top: 35px;
     font-weight: 800;
+    color: #000000;
 }
 .list label{
     width: 125%;
@@ -139,6 +141,18 @@ input[type="checkbox"]:checked+label:after {
     /* color: rgba(255, 0, 0, 0.6); */
     float: right;
 }
-/* Kích thước màn hình nhỏ hơn 768px (thường là điện thoại) */
+@media (max-width: 576px) {
+    .add {
+        width: 180%;
+        top: 25px;
+        left: -50%;
+    }
+    #count{
+        text-align: center;
+        margin-top: 15px;
+        width: 150px;
+        color: rgb(100, 7, 7);
+    }
+}
 
   
