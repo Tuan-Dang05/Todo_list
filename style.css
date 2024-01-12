@@ -1,0 +1,140 @@
+/* CHECK BOX */
+@import url(http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.css);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+label {
+    position: relative;
+    padding-left: 25px;
+    padding-top: 4px;
+    font-size: 13px;
+}
+
+label:before,
+label:after {
+    font-family: FontAwesome;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+label:before {
+    content: '\f096';
+    /*unchecked*/
+}
+
+label:after {
+    content: '\f046';
+    /*checked*/
+    max-width: 0;
+    overflow: hidden;
+    opacity: 0.5;
+    transition: all 0.35s;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked+label:after {
+    max-width: 20px;
+    opacity: 1;
+
+}
+
+/* COVER */
+.cover {
+    background-image: url(./img.jpg);
+    object-fit: cover;
+    background-size: cover;
+    /* background-image: linear-gradient(to bottom, #ef91c7, #df95d4, #cd9ade, #b89fe5, #a3a3e8, #91adf1, #7db6f6, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+    position: absolute;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 100px;
+    font-family: 'Salsa', cursive;
+}
+
+.header {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+.header h2{
+    background: -webkit-linear-gradient(#ff0000, #ea00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
+
+.add {
+    width: 150%;
+    position: relative;
+    top: 25px;
+    left: -30%;
+}
+
+.add input {
+    padding: 5px;
+    border-radius: 5px 0px 0px 5px;
+    width: 100%;
+}
+
+.add input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.add button {
+    float: right;
+    border: 1.6px solid black;
+    padding: 5px 10px;
+    margin: -37px -37px 0px 0px;
+    background-color: rgb(247, 42, 247);
+    color: white;
+    border-radius: 0px 5px 5px 0px;
+}
+
+/* LIST */
+.list{
+    margin-left: -90px;
+    margin-top: 35px;
+    font-weight: 800;
+}
+.list label{
+    width: 125%;
+}
+#count{
+    text-align: center;
+    margin-top: 15px;
+    color: rgb(100, 7, 7);
+}
+.footer button{
+    text-align: center;
+    color: white;
+    background-color: rgb(247, 42, 247);
+    padding: 3px 5px;
+    position: relative;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.error{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    margin: 10px 0px -20px 0px;
+    border-radius: 5px;
+    background-color: rgb(58, 58, 58,0.7);
+    display: none;
+}
+
+/* ICON trash */
+.trash{
+    /* color: rgba(255, 0, 0, 0.6); */
+    float: right;
+}
