@@ -44,6 +44,11 @@ input[type="checkbox"]:checked+label:after {
     opacity: 1;
 
 }
+input[type="checkbox"]:checked + label div{
+    text-decoration: line-through solid 2px rgb(77, 159, 158);
+    /* -webkit-text-stroke-width: 1px; */
+  /* -webkit-text-stroke-color: #a5a5a5; */
+}
 
 /* COVER */
 .cover {
@@ -109,7 +114,14 @@ input[type="checkbox"]:checked+label:after {
     color: #000000;
 }
 .list label{
-    width: 125%;
+    width: 120%;
+    /* background-color: #ff0000; */
+}
+.list label div{
+    width: 220px;
+    color: rgb(37, 37, 37);
+    margin-top: -3px;
+    overflow-wrap: anywhere; 
 }
 #count{
     text-align: center;
@@ -139,13 +151,15 @@ input[type="checkbox"]:checked+label:after {
 /* ICON trash */
 .trash{
     /* color: rgba(255, 0, 0, 0.6); */
+    margin-top: -23px;
     float: right;
 }
 @media (max-width: 576px) {
     .add {
         width: 180%;
+        /* position: relative; */
         top: 25px;
-        left: -50%;
+        left: -80px;
     }
     #count{
         text-align: center;
