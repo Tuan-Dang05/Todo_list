@@ -121,7 +121,7 @@ input[type="checkbox"]:checked + label div{
     width: 220px;
     color: rgb(37, 37, 37);
     margin-top: -3px;
-    overflow-wrap: anywhere; 
+    overflow-wrap: break-word; 
 }
 #count{
     text-align: center;
