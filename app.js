@@ -34,21 +34,14 @@ function listTask() {
                 <li>
                     <input id="${index}" type="checkbox" name="${index}" />
                     <label for="${index}">
-                    <td>${input.task}</td>
+                    <div>${input.task}</div>
                     <a href="#" onclick="deleteTask(${taskID})"><i class="trash fas fa-trash" style="color:${randomColor()}"></i></a>
                     </label>
                 </li>
             </ul>`;
             
-    // console.log(UpTask)
-    // <input id="${index}" type="checkbox" name="${index}" onchange="toggleStrikethrough(this, ${taskId})" />
-    //     <label for="${index}">
-    //       <td class="col-md-9" id="task-text-${taskId}">${input.task}</td>
-    //       <a href="#" onclick="deleteTask(${taskID})"><i class="trash fas fa-trash" style="color:${randomColor()}"></i></a>
-    //     </label>
   });
   document.getElementById("upTasks").innerHTML = UpTask;
-
 }
 
 function deleteTask(id){
@@ -57,6 +50,7 @@ function deleteTask(id){
     task.splice(id,1);
     localStorage.setItem("task",JSON.stringify(task))
     listTask();
+    checkedBox()
 }
 function clearALL(){
     localStorage.removeItem("task");
@@ -70,5 +64,4 @@ function randomColor() {
     const a = 0.9;
     return `rgba(${r}, ${g}, ${b}, ${a})`;
   }
-  
-  
+
